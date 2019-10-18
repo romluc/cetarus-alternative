@@ -56,7 +56,7 @@ img {
 }
 
 .navbar .logo {
-	font-size: 2rem;
+	width: 50%;
 }
 
 .navbar .nav {
@@ -255,6 +255,13 @@ img {
 
 /* Media Queries */
 @media (max-width: 700px) {
+	.navbar .logo {
+		width: 60%;
+	}
+
+	.navbar a {
+		font-size: 1rem;
+	}
 	.section-a .container {
 		grid-template-columns: 1fr;
 		text-align: center;
