@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #333;
-	--secondary-color: #444;
+	--secondary-color: #999;
 	--overlay-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -15,6 +15,13 @@ body {
 	line-height: 1.6;
 	color: #333;
 	font-size: 1.1rem;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
 }
 
 h1,
@@ -35,28 +42,31 @@ ul {
 
 img {
 	width: 100%;
+	padding-top: 1rem;
 }
 
-.container {
-	max-width: 1100px;
+.navbar {
+	font-size: 1.2rem;
+	padding-bottom: 0.3rem;
+}
+
+.navbar-container {
+	width: 100%;
 	margin: auto;
 	overflow: hidden;
 	padding: 0 2rem;
 }
 
-.navbar {
-	font-size: 1.2rem;
-	padding-top: 0.3rem;
-	padding-bottom: 0.3rem;
-}
-
-.navbar .container {
+.navbar .navbar-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	background-color: #444;
+	position: fixed;
 }
 
 .navbar .logo {
-	width: 50%;
+	width: 30%;
+	padding: 0.4rem;
 }
 
 .navbar .nav {
@@ -71,7 +81,7 @@ img {
 }
 
 .navbar .nav a:hover {
-	color: #777;
+	color: #fff;
 }
 
 /* Section A */
@@ -86,6 +96,7 @@ img {
 	grid-gap: 3rem;
 	align-items: center;
 	justify-content: center;
+	padding-top: 1.2rem;
 }
 
 .section-a h1 {
