@@ -1,10 +1,10 @@
 // Navbar transparent to solid
 $(document).ready(function() {
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 300) {
-			$('#ul.nav').addClass('solid');
+		if ($(this).scrollTop() > 100) {
+			$('.navbar-container').addClass('solid');
 		} else {
-			$('.navbar').removeClass('solid');
+			$('.navbar-container').removeClass('solid');
 		}
 	});
 });
