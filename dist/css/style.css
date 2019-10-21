@@ -1,6 +1,6 @@
 :root {
-	--primary-color: #333;
-	--secondary-color: #999;
+	--primary-color: #30466d;
+	--secondary-color: #008b8b;
 	--overlay-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -8,6 +8,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +33,7 @@ h2,
 h3,
 h4 {
 	line-height: 1.3;
+	text-align: center;
 }
 
 a {
@@ -40,21 +45,15 @@ ul {
 	list-style: none;
 }
 
-img {
-	width: 100%;
-	padding-top: 1rem;
-}
-
 .navbar {
 	font-size: 1.2rem;
-	padding-bottom: 0.3rem;
 }
 
 .navbar-container {
 	width: 100%;
-	margin: auto;
 	overflow: hidden;
-	padding: 0 2rem;
+	padding: 0.3rem 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar .navbar-container {
@@ -89,24 +88,24 @@ img {
 
 .navbar .nav a:hover {
 	color: #fff;
+	transition: 0.5s;
 }
 
 /* Section A */
-.section-a {
-	margin: 2rem 0;
-}
-
-.section-a .container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 3rem;
-	align-items: center;
+.section-a-container {
+	background-image: url('../img/sam-cropped.png');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	padding-top: 1.2rem;
+	align-items: center;
+	padding: 0 20px;
 }
 
 .section-a h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 	color: var(--primary-color);
 }
 
@@ -256,10 +255,12 @@ img {
 	cursor: pointer;
 	font-size: 1.1rem;
 	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:hover {
-	background: var(--secondary-color);
+	background-color: #00a5a5;
+	transition: 0.5s;
 }
 
 .overlay {
