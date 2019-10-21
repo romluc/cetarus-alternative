@@ -1,6 +1,7 @@
 :root {
-	--primary-color: #30466d;
+	--primary-color: #4b67b4;
 	--secondary-color: #008b8b;
+	--base-gray: #c0c0c0;
 	--overlay-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -15,9 +16,9 @@ html {
 }
 
 body {
-	font-family: 'Magra', sans-serif;
+	font-family: 'Roboto', 'Open Sans', sans-serif;
 	line-height: 1.6;
-	color: #333;
+	color: #535f67;
 	font-size: 1.1rem;
 }
 
@@ -33,7 +34,6 @@ h2,
 h3,
 h4 {
 	line-height: 1.3;
-	text-align: center;
 }
 
 a {
@@ -106,7 +106,8 @@ ul {
 
 .section-a h1 {
 	font-size: 3.5rem;
-	color: var(--primary-color);
+	color: var(--base-gray);
+	text-shadow: 0.1rem 0.1rem 0.8rem black;
 }
 
 .section-a p {
@@ -114,14 +115,34 @@ ul {
 }
 
 /* Section B */
-.section-b {
+.section-b .gallery {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.section-b .gallery a:first-child {
+	grid-row: 1 / 3;
+	grid-column: 1 / 3;
+}
+
+.section-b .gallery a:nth-child(2) {
+	grid-column: 2 / 4;
+}
+
+.section-b .gallery img,
+.section-b .gallery a {
+	width: 100%;
+}
+
+/* Section C */
+.section-c {
 	position: relative;
 	background: url('../img/section-b.jpeg') no-repeat bottom center/cover;
 	background-attachment: fixed;
 	height: 600px;
 }
 
-.section-b-inner {
+.section-c-inner {
 	color: #fff;
 	height: 100%;
 	display: flex;
@@ -134,50 +155,30 @@ ul {
 	padding: 5rem 0;
 }
 
-.section-b-inner h3 {
+.section-c-inner h3 {
 	font-size: 2rem;
 }
 
-.section-b-inner h2 {
+.section-c-inner h2 {
 	font-size: 5rem;
 	margin-top: 1rem;
 }
 
-.section-b-inner p {
+.section-c-inner p {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 }
 
-/* Section C */
-.section-c .gallery {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-}
-
-.section-c .gallery a:first-child {
-	grid-row: 1 / 3;
-	grid-column: 1 / 3;
-}
-
-.section-c .gallery a:nth-child(2) {
-	grid-column: 3 / 5;
-}
-
-.section-c .gallery img,
-.section-c .gallery a {
-	width: 100%;
-}
-
 /* Footer  */
 .section-footer {
-	background: var(--primary-color);
+	background: #333;
 	color: #fff;
 	padding: 4rem 0;
 }
 
 .section-footer .container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1rem;
 }
 
@@ -198,6 +199,12 @@ ul {
 .section-footer a > i {
 	color: #555;
 	margin-right: 0;
+}
+
+.section-footer .social {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Email form */
